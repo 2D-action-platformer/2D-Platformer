@@ -13,8 +13,15 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< HEAD
         if(collision.name == "Hero")
         {
+=======
+        Debug.Log(collision.name);
+        if(collision.gameObject.tag == "Player")
+        {
+            Debug.Log(collision.gameObject.tag);
+>>>>>>> main
             gm.currentCheckpoint = gameObject;
         }
     }

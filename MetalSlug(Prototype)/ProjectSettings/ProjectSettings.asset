@@ -618,7 +618,17 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
+<<<<<<< HEAD
   cloudServicesEnabled: {}
+=======
+  cloudServicesEnabled:
+    Analytics: 1
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    Unity Ads: 0
+>>>>>>> main
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -631,10 +641,17 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
+<<<<<<< HEAD
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   projectName: 
   organizationId: 
+=======
+  cloudProjectId: 9cd960cf-872e-4833-ae37-822b8141079a
+  framebufferDepthMemorylessMode: 0
+  projectName: MetalSlug(Prototype)
+  organizationId: jmumford45
+>>>>>>> main
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

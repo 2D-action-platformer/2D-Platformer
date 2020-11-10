@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6598408568882183329}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 2548754523552222877}
+>>>>>>> main
   - component: {fileID: 6598408568882183330}
   m_Layer: 0
   m_Name: _GameManager
@@ -31,6 +35,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &2548754523552222877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598408568882183328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c91d9e90cb229b4e83f5007c6958f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  spawnDelay: 1.5
+  currentCheckpoint: {fileID: 0}
+>>>>>>> main
 --- !u!114 &6598408568882183330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,5 +68,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundElements:
   - {fileID: 0}
+<<<<<<< HEAD
   parallexScale: []
+=======
+  - {fileID: 0}
+>>>>>>> main
   smoothing: 1

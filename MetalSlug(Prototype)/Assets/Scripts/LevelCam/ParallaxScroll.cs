@@ -7,7 +7,11 @@ public class ParallaxScroll : MonoBehaviour
     //Use array to store elements to paralex
     public Transform[] backgroundElements;
     //use array to store paralex scales for distance of element
+<<<<<<< HEAD
     public float[] parallexScale;
+=======
+    private float[] parallexScale;
+>>>>>>> main
     //amount of smoothing as objects move. Set abouve >0 
     public float smoothing = 1f;
 

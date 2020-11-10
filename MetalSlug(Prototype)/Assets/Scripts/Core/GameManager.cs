@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class GameManager : MonoBehaviour
 {
+=======
+//used to manage frequently used functions such as spawning and destroying objects
+public class GameManager : MonoBehaviour
+{
+    //create partial singleton to prevent multiple instances
+>>>>>>> main
     public static GameManager gm;
 
     private void Start()
@@ -27,4 +34,19 @@ public class GameManager : MonoBehaviour
         player.SetActive(true);
         Debug.Log("add effects");
     }
+<<<<<<< HEAD
+=======
+
+    //methods to kill player and enemy 
+    public static void KillEnemy(EnemyBehaviour enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
+    
+    public static void KillPlayer(GameObject player)
+    {
+        player.SetActive(false);
+        gm.RespawnPlayer(player);
+    }
+>>>>>>> main
 }
