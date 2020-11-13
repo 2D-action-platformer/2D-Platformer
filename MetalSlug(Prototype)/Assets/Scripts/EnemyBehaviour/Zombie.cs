@@ -16,15 +16,16 @@ public class Zombie : EnemyBehaviour
         base.takeDamage(damage);
     }
 
-    void OnTriggerEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            Debug.Log(collision.name);
             isAttacking = true;
             isMoving = false;
         }
     }
-    void OnTriggerExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {

@@ -9,9 +9,9 @@ public class EnemyBehaviour : MonoBehaviour
     [System.Serializable]
     public class EnemyStats
     {
-        public int health = 10;
-        public float speed = 1.0f;
-        public int atk_damage = 1;
+        public int health;
+        public float speed;
+        public int atk_damage;
     }
 
     public EnemyStats stats = new EnemyStats();
@@ -24,18 +24,14 @@ public class EnemyBehaviour : MonoBehaviour
     //audio source array to store enemy sounds
     public AudioSource[] sound;
     //bool for if enemy is attacking somethinh
-    public static bool isAttacking = false;
+    public bool isAttacking = false;
     //bool for is the enemy is moving or not
-    public static bool isMoving = true;
-    //collider component as feet to prevent falling through ground
-    //allows other colliders to work as triggers so player can pass through them
-    public Collider2D feet;
+    public bool isMoving = true;
     private void Awake()
     {
-        animate = GetComponent<Animator>();
-        //_collider = GetComponent<Collider2D>();
-        sound = GetComponents<AudioSource>();
-        rb = GetComponent<Rigidbody2D>();
+        animate = this.gameObject.GetComponent<Animator>();
+        sound = this.gameObject.GetComponents<AudioSource>();
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     //method to decrement the amount of health 
@@ -52,6 +48,4 @@ public class EnemyBehaviour : MonoBehaviour
             GameManager.KillEnemy(this);
         }
     }
-
-
 }

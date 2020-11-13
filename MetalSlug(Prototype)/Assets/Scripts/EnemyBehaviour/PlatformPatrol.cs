@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class PlatformPatrol : MonoBehaviour
 {
-    EnemyBehaviour.EnemyStats _stats = new EnemyBehaviour.EnemyStats();
-    private Animator animate;
+    EnemyBehaviour enemy;
+    public Animator animate;
     private Rigidbody2D rb;
     public float speed;
     private float distance = 1.0f;
@@ -18,11 +18,11 @@ public class PlatformPatrol : MonoBehaviour
 
     public void Start()
     {
-        speed = _stats.speed;
-        animate = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-       // Debug.Log(animate.name);
-        isMoving = EnemyBehaviour.isMoving;
+        enemy = this.gameObject.GetComponent<EnemyBehaviour>();
+        speed = enemy.stats.speed;
+        animate = enemy.GetComponent<Animator>();
+        rb = enemy.GetComponent<Rigidbody2D>();
+        //isMoving = enemy.isMoving;
     }
     // Update is called once per frame
     void Update()
@@ -38,12 +38,14 @@ public class PlatformPatrol : MonoBehaviour
             //animate.Play("walk");
         }
         else
+        {
+            Debug.Log(isMoving);
             stopPatrol(isMoving);
-
+        }
         hit = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (hit.collider == null)
         {
-           // Debug.Log(hit.collider);
+            //Debug.Log(hit.collider);
             if (movingRight == true)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);

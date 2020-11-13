@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803093578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.53, z: 0}
+  m_LocalPosition: {x: -0.83, y: -2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1333237425437543521}
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.42764094, y: 0.36651143}
+  m_Offset: {x: 0.20105405, y: 0.36651143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8822677, y: 0.26697713}
+  m_Size: {x: 0.92904747, y: 0.13177426}
   m_EdgeRadius: 0
 --- !u!1 &1333237424061397403
 GameObject:
@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: 1333237425437543526}
   - component: {fileID: 1333237425437543527}
   - component: {fileID: 1333237425437543520}
-  - component: {fileID: 1333237425437543524}
   - component: {fileID: 1067079400}
   m_Layer: 14
   m_Name: 'Zombie '
@@ -245,7 +244,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: -0.0039515495}
+  m_Offset: {x: -0.3, y: 0.10068321}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -256,22 +255,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 3.541862}
+  m_Size: {x: 1.4, y: 2.9140534}
   m_EdgeRadius: 0
---- !u!114 &1333237425437543524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333237425437543523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f998760717c5a1b47ab7a06f02f8948b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  groundDetection: {fileID: 1333237424061397402}
 --- !u!114 &1067079400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +274,7 @@ MonoBehaviour:
     speed: 1
     atk_damage: 1
   animate: {fileID: 0}
-  _collider: {fileID: 0}
-  sound: []
   rb: {fileID: 0}
+  sound: []
+  isAttacking: 0
+  isMoving: 1
