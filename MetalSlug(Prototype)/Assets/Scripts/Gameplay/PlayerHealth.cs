@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     public float MaxHealth = 10f;
     public float CurrentHealth = 10f;
     private BoxCollider2D bc2d;
+    //public int lives = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if(CurrentHealth == 0)
         {
-            playerController.enabled = false;
+            //playerController.enabled = false;
+            StartCoroutine(Dead());
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -29,4 +32,15 @@ public class PlayerHealth : MonoBehaviour
             CurrentHealth = CurrentHealth - 1;
         }
     }
+
+    IEnumerator Dead()
+    {
+        Debug.Log("DEAD");
+        GetComponent<Renderer>().enabled = false;
+        yield return new WaitForSeconds(3);
+        Debug.Log("RESPAWN");
+        GetComponent<Renderer>().enabled = true;
+        CurrentHealth = 10f;
+    }
 }
+
