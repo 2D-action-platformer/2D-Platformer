@@ -81,4 +81,9 @@ public class PlayerController : MonoBehaviour
         else if (rb2d.velocity.y <= 0 && !jumpOffCoroutineIsRunning)
             Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
     }
+    IEnumerator Stop()
+    {
+        rb2d.velocity = new Vector2(0,0);
+        yield return new WaitForSeconds(0);
+    }
 }

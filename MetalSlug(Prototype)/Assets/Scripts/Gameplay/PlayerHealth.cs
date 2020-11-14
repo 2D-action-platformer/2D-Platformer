@@ -7,8 +7,10 @@ public class PlayerHealth : MonoBehaviour
     public PlayerController playerController;
     public float MaxHealth = 10f;
     public float CurrentHealth = 10f;
+    public float iframes = 3f;
     private BoxCollider2D bc2d;
     //public int lives = 3;
+    bool damageable = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +21,29 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CurrentHealth == 0)
+        
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.layer == LayerMask.NameToLayer("Enemy") && damageable)
         {
-            //playerController.enabled = false;
+           StartCoroutine(Hit());
+        }
+    }
+    IEnumerator Hit()
+    {
+        CurrentHealth = CurrentHealth -1;
+        damageable = false;
+        if(CurrentHealth <= 0)
+        {
             StartCoroutine(Dead());
         }
-    }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if(col.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        else
         {
-            CurrentHealth = CurrentHealth - 1;
+            yield return new WaitForSeconds(iframes);
+            damageable = true;
         }
     }
-
     IEnumerator Dead()
     {
         Debug.Log("DEAD");
@@ -41,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("RESPAWN");
         GetComponent<Renderer>().enabled = true;
         CurrentHealth = 10f;
+        damageable = true;
     }
 }
 
