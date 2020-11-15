@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight= 5f;
     private Rigidbody2D rb2d;
     private BoxCollider2D bc2d;
+    private bool isLeft = false;
     int playerLayer, platformLayer, wallLayer;
     bool jumpOffCoroutineIsRunning = false;
     bool isGrounded = true;
@@ -33,6 +34,15 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine ("JumpOff");
         }
+		
+		if (Input.GetKeyDown("left") && !isLeft){
+            isLeft = true;
+			transform.Rotate(0f, 180f, 0f);
+		} else if (Input.GetKeyDown("right") && isLeft){
+             isLeft = false;
+			transform.Rotate(0f, 180f, 0f);
+		}
+		
         if (rb2d.velocity.y > 0)
 			Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
 		
@@ -74,7 +84,8 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetButtonDown("Jump") && Input.GetKey(KeyCode.DownArrow) && rb2d.velocity.y == 0)
         {
             StartCoroutine("JumpOff");
-        }
+        } 
+		
         if (rb2d.velocity.y > 0)
             Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
 
