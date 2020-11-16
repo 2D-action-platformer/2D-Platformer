@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Zombie : EnemyBehaviour
 {
+    public int health = 100;
     protected override void takeDamage(int damage)
     {
         //play hurt sound 
@@ -14,6 +15,13 @@ public class Zombie : EnemyBehaviour
             sound[0].Play();
         //call base.takeDamage to decrement health
         base.takeDamage(damage);
+    }
+
+    public void damageEnemy(int damage){
+        health -= damage;
+        if(health <= 0){
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
