@@ -6,12 +6,45 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public Transform player;
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")){
+         
+        if(Input.GetKey("space")){
             Shoot();
         }
+
+        bool playerRight = player.transform.rotation.eulerAngles.y < 180;
+       
+        if( Input.GetKey("t") && Input.GetKey("h") && playerRight){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * 45);
+        } else  if( Input.GetKey("t") && Input.GetKey("f") && !playerRight){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * 135);
+        } else if(Input.GetKey("t")){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * 90);  
+        } else if(Input.GetKey("g") && Input.GetKey("h") && playerRight){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * -45);  
+        } else if(Input.GetKey("g") && Input.GetKey("f") && !playerRight){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * -135);  
+        }  else if(Input.GetKey("g")){
+            firePoint.transform.rotation = Quaternion.identity;
+            firePoint.transform.Rotate (Vector3.forward * -90);  
+        }  else {
+            if(playerRight){
+                firePoint.transform.rotation = Quaternion.identity;
+            }else {
+                firePoint.transform.rotation = Quaternion.identity;
+                firePoint.transform.Rotate (Vector3.forward * 180);
+            }
+        }
+        
     }
 
     void Shoot(){
