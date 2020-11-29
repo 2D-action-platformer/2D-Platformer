@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
     public float speed = 10f;
     public float jumpHeight= 5f;
     private Rigidbody2D rb2d;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         float x = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2 (x*speed, rb2d.velocity.y);
         if(Input.GetButtonDown("Jump") && !Input.GetKey (KeyCode.DownArrow) && isGrounded == true) {
