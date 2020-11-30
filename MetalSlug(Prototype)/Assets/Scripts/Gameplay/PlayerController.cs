@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private BoxCollider2D bc2d;
     private bool isLeft = false;
+    private bool isJumping = false;
     int playerLayer, platformLayer, wallLayer;
     bool jumpOffCoroutineIsRunning = false;
     bool isGrounded = true;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        animator.SetBool("isJumping", isJumping);
         float x = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2 (x*speed, rb2d.velocity.y);
         if(Input.GetButtonDown("Jump") && !Input.GetKey (KeyCode.DownArrow) && isGrounded == true) {
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
         if(col.collider.gameObject.layer == LayerMask.NameToLayer("Ground") || col.collider.gameObject.layer == LayerMask.NameToLayer("Platform"))
         {
             isGrounded = true;
+            isJumping = false;
         }
         if (col.collider.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
@@ -67,6 +70,7 @@ public class PlayerController : MonoBehaviour
         if(col.collider.gameObject.layer == LayerMask.NameToLayer("Ground") || col.collider.gameObject.layer == LayerMask.NameToLayer("Platform"))
         {
             isGrounded = false;
+            isJumping = true;
         }
     }
     IEnumerator JumpOff()
