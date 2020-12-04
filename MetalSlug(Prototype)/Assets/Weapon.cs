@@ -7,14 +7,19 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public Transform player;
+    public Animator animator;
+
+    private bool isShooting = false;
 
     // Update is called once per frame
     void Update()
     {
-         
+        animator.SetBool("isShooting", isShooting);
         if(Input.GetKey("space")){
             Shoot();
+            isShooting = true; 
         }
+        else isShooting = false;
 
         bool playerRight = player.transform.rotation.eulerAngles.y < 180;
        

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D bc2d;
     private bool isLeft = false;
     private bool isJumping = false;
+    private bool isWalking = false;
     int playerLayer, platformLayer, wallLayer;
     bool jumpOffCoroutineIsRunning = false;
     bool isGrounded = true;
@@ -29,8 +30,14 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         animator.SetBool("isJumping", isJumping);
+        animator.SetBool("isWalking", isWalking);
         float x = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2 (x*speed, rb2d.velocity.y);
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            isWalking = true;
+        }
+        else isWalking = false;
         if(Input.GetButtonDown("Jump") && !Input.GetKey (KeyCode.DownArrow) && isGrounded == true) {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpHeight), ForceMode2D.Impulse);
         }
@@ -47,7 +54,7 @@ public class PlayerController : MonoBehaviour
 			transform.Rotate(0f, 180f, 0f);
 		}
 		
-        if (rb2d.velocity.y > 0)
+        if (rb2d.velocity.y > 1 && !isGrounded)
 			Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, true);
 		
 		else if (rb2d.velocity.y <= 0 && !jumpOffCoroutineIsRunning)
