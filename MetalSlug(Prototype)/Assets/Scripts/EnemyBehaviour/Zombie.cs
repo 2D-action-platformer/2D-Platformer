@@ -5,24 +5,16 @@ using UnityEngine.UI;
 
 public class Zombie : EnemyBehaviour
 {
-    public int health = 100;
-    protected override void takeDamage(int damage)
-    {
-        //play hurt sound 
-        //play animation if available
-        //if the sound is playing don't play again till over otherwise play sound
-        if(!sound[0].isPlaying)
-            sound[0].Play();
-        //call base.takeDamage to decrement health
-        base.takeDamage(damage);
-    }
-
-    public void damageEnemy(int damage){
-        health -= damage;
-        if(health <= 0){
-            Destroy(gameObject);
-        }
-    }
+    /* public override void takeDamage(int damage)
+     {
+         //play hurt sound 
+         //play animation if available
+         //if the sound is playing don't play again till over otherwise play sound
+         if(!sound[0].isPlaying)
+             sound[0].Play();
+         //call base.takeDamage to decrement health
+         base.takeDamage(damage);
+     }*/
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,33 +23,29 @@ public class Zombie : EnemyBehaviour
             Debug.Log(collision.name);
             isAttacking = true;
             isMoving = false;
+            attackPlayer();
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            isAttacking = false;
-            isMoving = true;
-        }
+        isAttacking = false;
+        isMoving = true;
+        attackPlayer();
     }
 
     private void attackPlayer()
     {
-            animate.SetBool("isAttacking", true);
-            animate.SetBool("isMoving", false);
-    }
-
-    private void Update()
-    {
         if (isAttacking)
         {
-            attackPlayer();
+            animate.SetBool("isAttacking", true);
+            animate.SetBool("isMoving", false);
         }
         else
         {
             animate.SetBool("isAttacking", false);
             animate.SetBool("isMoving", true);
-        }    
+        }
     }
+
+   
 }
