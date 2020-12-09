@@ -19,7 +19,6 @@ public class PatrolPoints : MonoBehaviour
         animate = enemy.GetComponent<Animator>();
         rb = enemy.GetComponent<Rigidbody2D>();
         speed = enemy.stats.speed;
-        //isMoving = enemy.isMoving;
     }
     private void Reset()
     {
@@ -29,8 +28,12 @@ public class PatrolPoints : MonoBehaviour
     private void Update()
     {
         MoveTo();
+        if (enemy.isDead)
+        {
+            stopPatrol();
+            enabled = false;
+        }
     }
-
     void MoveTo()
     {
         isMoving = animate.GetBool("isMoving");
@@ -48,9 +51,21 @@ public class PatrolPoints : MonoBehaviour
         }
         else
         {
-            Debug.Log(isMoving);
-            stopPatrol(isMoving);
+            //Debug.Log(isMoving);
+            stopPatrol();
         }
+       
+        getNextPoint(goal);
+        
+    }
+    void stopPatrol()
+    {
+        rb.velocity = Vector2.zero;
+        animate.SetBool("isMoving", false);
+        
+    }
+    void getNextPoint(Transform goal)
+    {
         //Check the distance between enemy and goal point to trigger next point
         if (Vector2.Distance(transform.position, goal.position) < 0.2f)
         {
@@ -62,15 +77,6 @@ public class PatrolPoints : MonoBehaviour
                 nextPoint = 1;
             //Apply the change on the nextID
             next += nextPoint;
-        }
-    }
-    void stopPatrol(bool not_moving)
-    {
-        if (not_moving)
-        {
-            transform.position = Vector2.zero;
-            Debug.Log(transform.position);
-            animate.SetBool("isMoving", false);
         }
     }
 }

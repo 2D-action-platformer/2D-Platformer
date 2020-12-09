@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float CurrentHealth = 10f;
     public float iframes = 3f;
     private BoxCollider2D bc2d;
+    private GameObject player;
     //public int lives = 3;
     bool damageable = true;
 
@@ -16,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         bc2d = GetComponent<BoxCollider2D> ();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -25,18 +27,23 @@ public class PlayerHealth : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.layer == LayerMask.NameToLayer("Enemy") && damageable)
+        //if(col.gameObject.layer == LayerMask.NameToLayer("Enemy") && damageable)
+        if(col.gameObject.name.Equals("Hand"))
         {
-           StartCoroutine(Hit());
+            if(player.activeInHierarchy)
+                StartCoroutine(Hit());
         }
     }
-    IEnumerator Hit()
+    public IEnumerator Hit()
     {
         CurrentHealth = CurrentHealth -1;
         damageable = false;
         if(CurrentHealth <= 0)
         {
-            StartCoroutine(Dead());
+            damageable = true;
+            GameManager.KillPlayer(this.gameObject);
+            GameManager.gm.StartCoroutine(GameManager.gm.RespawnPlayer(this.gameObject));
+            //StartCoroutine(Dead());
         }
         else
         {
@@ -44,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
             damageable = true;
         }
     }
-    IEnumerator Dead()
+   /* IEnumerator Dead()
     {
         Debug.Log("DEAD");
         GetComponent<Renderer>().enabled = false;
@@ -53,6 +60,6 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<Renderer>().enabled = true;
         CurrentHealth = 10f;
         damageable = true;
-    }
+    }*/
 }
 
