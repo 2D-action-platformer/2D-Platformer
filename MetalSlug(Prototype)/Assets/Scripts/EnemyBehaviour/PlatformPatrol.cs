@@ -7,9 +7,9 @@ using UnityEngine;
 public class PlatformPatrol : MonoBehaviour
 {
     EnemyBehaviour enemy;
-    public Animator animate;
+    private Animator animate;
     private Rigidbody2D rb;
-    public float speed;
+    private float speed;
     private float distance = 1.0f;
     private bool movingRight = true;
     private RaycastHit2D hit;
@@ -25,9 +25,14 @@ public class PlatformPatrol : MonoBehaviour
         //isMoving = enemy.isMoving;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         patrol();
+        if (enemy.isDead)
+        {
+            stopPatrol();
+            enabled = false;
+        }
     }
     void patrol()
     {
@@ -35,12 +40,10 @@ public class PlatformPatrol : MonoBehaviour
         if (isMoving == true)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            //animate.Play("walk");
         }
         else
         {
-            Debug.Log(isMoving);
-            stopPatrol(isMoving);
+            stopPatrol();
         }
         hit = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (hit.collider == null)
@@ -50,23 +53,23 @@ public class PlatformPatrol : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = false;
+                enemy.facingRight = false;
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = true;
+                enemy.facingRight = true;
             }
         }
             //Debug.Log(hit.collider.name);
     }
 
-    void stopPatrol(bool not_moving)
+    void stopPatrol()
     {
-        if(not_moving)
-        {
-            rb.velocity = Vector2.zero;
-            animate.SetBool("isMoving", false);
-        }
+        rb.velocity = Vector2.zero;
+        animate.SetBool("isMoving", false);
+    
     }
 }
 
