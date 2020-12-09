@@ -5470,7 +5470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4240465, y: 0.34671926, z: -10}
+  m_LocalPosition: {x: -0.24394608, y: 0.34671926, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5679,6 +5679,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be9788e67567e84e9081390b93fe4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &604685546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604685538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8167cf3ce255b7b4a9ff81d852f73871, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &642846320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7403,6 +7422,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7361077357980075090, guid: 3fdb4cd943912a54a9b53b3778bead03, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 604685546}
     - target: {fileID: 7361077357980075091, guid: 3fdb4cd943912a54a9b53b3778bead03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.12
