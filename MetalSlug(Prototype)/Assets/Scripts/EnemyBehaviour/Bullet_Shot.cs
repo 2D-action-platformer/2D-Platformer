@@ -9,6 +9,7 @@ public class Bullet_Shot : MonoBehaviour
     private Transform player_pos;
     private Vector2 target;
     private PlayerHealth PlayerHealth;
+    private Animator clip;
     //public float bullet_life;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Bullet_Shot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player_pos = player.transform;
         target = new Vector2(player_pos.position.x, player_pos.position.y);
+        clip = GetComponent<Animator>();
         //PlayerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
@@ -31,6 +33,7 @@ public class Bullet_Shot : MonoBehaviour
     {
         if(transform.position.x == target.x && transform.position.y == target.y)
         {
+            clip.Play("bullet_explode");
             this.gameObject.SetActive(false);
         }
     }

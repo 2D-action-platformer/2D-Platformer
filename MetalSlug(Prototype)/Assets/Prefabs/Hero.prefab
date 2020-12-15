@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7361077357980075090}
   - component: {fileID: 604685544}
   - component: {fileID: 604685545}
+  - component: {fileID: 604685546}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25d5d731aa87404bbecdd2065df1f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 604685546}
   speed: 4
   jumpHeight: 8
 --- !u!114 &604685544
@@ -192,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 7361077357980075090}
-  MaxHealth: 100
-  CurrentHealth: 100
+  MaxHealth: 4
+  CurrentHealth: 4
   iframes: 3
 --- !u!114 &604685545
 MonoBehaviour:
@@ -210,3 +212,22 @@ MonoBehaviour:
   firePoint: {fileID: 131402618}
   bulletPrefab: {fileID: 6099041681866525168, guid: eb45f242fcd6da049890afe5d9467b11, type: 3}
   player: {fileID: 7361077357980075091}
+--- !u!95 &604685546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361077357980075089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8167cf3ce255b7b4a9ff81d852f73871, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

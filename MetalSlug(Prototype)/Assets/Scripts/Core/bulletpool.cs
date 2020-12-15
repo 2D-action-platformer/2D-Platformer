@@ -10,7 +10,7 @@ public class bulletpool : MonoBehaviour
     private GameObject poolBullet;
     private bool notEnoughBullets = true;
 
-    private List<GameObject> bullets;
+    private List<GameObject> pellets;
 
     private void Awake()
     {
@@ -19,17 +19,17 @@ public class bulletpool : MonoBehaviour
 
     private void Start()
     {
-        bullets = new List<GameObject>();
+        pellets = new List<GameObject>();
     }
 
     public GameObject GetBullet()
     {
-        if(bullets.Count > 0)
+        if(pellets.Count > 0)
         {
-            for(int i = 0; i < bullets.Count; i++)
+            for(int i = 0; i < pellets.Count; i++)
             {
-                if (!bullets[i].activeInHierarchy)
-                    return bullets[i];
+                if (!pellets[i].activeInHierarchy)
+                    return pellets[i];
             }
         }
 
@@ -37,7 +37,7 @@ public class bulletpool : MonoBehaviour
         {
             GameObject bul = Instantiate(poolBullet);
             bul.SetActive(false);
-            bullets.Add(bul);
+            pellets.Add(bul);
             return bul;
         }
         return null;

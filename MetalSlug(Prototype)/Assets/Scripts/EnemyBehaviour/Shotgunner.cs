@@ -130,6 +130,8 @@ public class Shotgunner : EnemyBehaviour
                 {
                     Fire();
                     reload_time = time_before_fire;
+                    if (!sound[1].isPlaying)
+                        sound[1].Play();
                 }
                 else
                     Reload();

@@ -5,17 +5,6 @@ using UnityEngine.UI;
 
 public class Zombie : EnemyBehaviour
 {
-    /* public override void takeDamage(int damage)
-     {
-         //play hurt sound 
-         //play animation if available
-         //if the sound is playing don't play again till over otherwise play sound
-         if(!sound[0].isPlaying)
-             sound[0].Play();
-         //call base.takeDamage to decrement health
-         base.takeDamage(damage);
-     }*/
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
@@ -39,6 +28,8 @@ public class Zombie : EnemyBehaviour
         {
             animate.SetBool("isAttacking", true);
             animate.SetBool("isMoving", false);
+            if(!sound[1].isPlaying)
+                sound[1].Play();
         }
         else
         {

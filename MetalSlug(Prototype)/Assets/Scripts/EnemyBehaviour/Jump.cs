@@ -44,7 +44,12 @@ public class Jump : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Debug.Log(collision);
-        if (collision.tag != "Ground")
-            StartCoroutine(Pause());
+        if (this.gameObject.activeInHierarchy)
+        {
+            if (collision.tag != "Ground" && collision.isActiveAndEnabled)
+                StartCoroutine(Pause());
+        }
+        else
+            enabled = false;
     }
 }

@@ -82,6 +82,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         //decrement our max health by damage amount
         stats.health -= damage;
+        if (!sound[0].isPlaying && stats.health > 0)
+            sound[0].Play();
         if (stats.health <= 0)
         {
             //play death animation and sound

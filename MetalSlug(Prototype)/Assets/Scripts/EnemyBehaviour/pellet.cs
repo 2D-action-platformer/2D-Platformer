@@ -33,7 +33,7 @@ public class pellet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && collision.gameObject.activeInHierarchy)
         {
             StartCoroutine(PlayerHealth.Hit());
             this.gameObject.SetActive(false);

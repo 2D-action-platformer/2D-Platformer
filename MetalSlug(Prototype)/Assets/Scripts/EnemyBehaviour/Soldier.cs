@@ -10,9 +10,14 @@ public class Soldier : EnemyBehaviour
     public GameObject bullet;
     private GameObject player_check;
     private Transform player_pos;
+    private AudioSource fireSound;
     public float fireDistance;
     public float retreatDistance;
 
+    private void Awake()
+    {
+        fireSound = sound[1];
+    }
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -25,6 +30,10 @@ public class Soldier : EnemyBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDead)
+        {
+            enabled = false;
+        }
         if (player_check.activeInHierarchy)
         {
             FireRange();
@@ -78,6 +87,8 @@ public class Soldier : EnemyBehaviour
             Instantiate(bullet, Firepoint.transform.position, rotation);
             //Debug.Log(rotation);
             btwnShots = reload;
+            //if (!sound[1].isPlaying)
+            fireSound.Play();
         }
         else
         {
@@ -110,6 +121,15 @@ public class Soldier : EnemyBehaviour
         if (Vector2.Distance(transform.position, player_pos.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(player_pos.position.x, transform.position.y), -stats.speed * Time.deltaTime);
+            isMoving = true;
         }
+    }
+
+    private void AnimationController()
+    {
+        if (isMoving)
+            animate.Play("run");
+        else if (!isMoving)
+            animate.Play("Aim");
     }
 }
