@@ -28,6 +28,7 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 5095399153661299578, guid: 2319ae8ea983e5d47847774862e1fdfe, type: 3}
@@ -322,5 +323,6 @@ SpriteAtlas:
   - Steampunk Blocks_1
   - Steampunk Blocks_2
   - Steampunk Blocks_3
+  m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0

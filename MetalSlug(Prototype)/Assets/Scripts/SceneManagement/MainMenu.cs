@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // Loads next scene, level 1 in this case
     }
 
+    public void LevelScreen() {
+        SceneManager.LoadScene("Levels");
+    }
+
     public void QuitGame() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
