@@ -33,11 +33,17 @@ public class Patrol : MonoBehaviour
 
     }
 
-    IEnumerator Wait()
+    /*IEnumerator Wait()
     {
         Debug.Log("wait");
-        yield return new WaitForSecondsRealtime(10f);
-    }
+        float distance = 5.0f;
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(transform.position, Vector2.left, distance);
+        Debug.DrawRay(transform.position, Vector2.left, Color.red, distance);
+        yield return new WaitForSecondsRealtime(3f);
+        hit = Physics2D.Raycast(transform.position, Vector2.left, distance);
+        Debug.DrawRay(transform.position, Vector2.left, Color.blue, distance);
+    }*/
 
     void Patrol_check()
     {

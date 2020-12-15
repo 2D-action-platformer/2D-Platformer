@@ -10,10 +10,14 @@ public class DeathZone : MonoBehaviour
         Debug.Log(gameObject.activeSelf);
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("executes if statement");
-            collision.gameObject.SetActive(false);
-            Debug.Log(gameObject.activeSelf);
-            GameManager.gm.StartCoroutine(GameManager.gm.RespawnPlayer(collision.gameObject));
+            GameManager.KillPlayer(collision.gameObject);
+            //Debug.Log(gameObject.activeSelf);
+            /*if(GameManager.RemainingLives <= 0)
+            {
+                GameManager.gm.EndGame();
+            }
+            else
+                GameManager.gm.StartCoroutine(GameManager.gm.RespawnPlayer(collision.gameObject));*/
         }
     }
 }

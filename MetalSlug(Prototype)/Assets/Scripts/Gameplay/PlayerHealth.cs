@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
         {
             damageable = true;
             GameManager.KillPlayer(this.gameObject);
-            GameManager.gm.StartCoroutine(GameManager.gm.RespawnPlayer(this.gameObject));
+            //GameManager.gm.StartCoroutine(GameManager.gm.RespawnPlayer(this.gameObject));
             //StartCoroutine(Dead());
         }
         else
