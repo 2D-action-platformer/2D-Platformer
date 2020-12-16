@@ -36,11 +36,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject gameOverUI;
+    public GameObject levelCompleteUI;
 
     public void EndGame()
     {
         Debug.Log("Game over");
         gameOverUI.SetActive(true);
+    }
+    public void CompleteLevel()
+    {
+        Debug.Log("Level Complete");
+        levelCompleteUI.SetActive(true);
     }
     public IEnumerator RespawnPlayer(GameObject player)
     {
