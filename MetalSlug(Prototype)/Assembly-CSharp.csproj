@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\EnemyBehaviour\Patrol.cs" />
      <Compile Include="Assets\Scripts\Gameplay\HealthBar.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Zombie.cs" />
+     <Compile Include="Assets\Scripts\Core\GoalZone.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Missile.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\SceneManagement\MainMenu.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\EnemyBehaviour\PatrolPoints.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\LivesCounterUI.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\LevelComplete.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Core\GameManager.cs" />
      <Compile Include="Assets\Scripts\SceneManagement\PauseMenu.cs" />
@@ -67,8 +69,8 @@
      <Compile Include="Assets\Scripts\Gameplay\Bullet.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Jump.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\PlatformPatrol.cs" />
-     <Compile Include="Assets\Scripts\Core\GoalZone.cs" />
-     <Compile Include="Assets\Scripts\SceneManagement\LevelComplete.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\LevelComplete Lv2.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\L2LC.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
