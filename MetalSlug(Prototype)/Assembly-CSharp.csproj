@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\Core\EventManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
      <Compile Include="Assets\Scripts\LevelCam\ParallaxScroll.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\LevelComplete Lv2.cs" />
      <Compile Include="Assets\Scripts\LevelCam\Tiling.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Bullet_Shot.cs" />
      <Compile Include="Assets\Scripts\SceneManagement\GameOver.cs" />
@@ -52,6 +53,7 @@
      <Compile Include="Assets\Scripts\Core\GoalZone.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Missile.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\L2LC.cs" />
      <Compile Include="Assets\Scripts\SceneManagement\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Core\DeathZone.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\PatrolPoints.cs" />
@@ -69,8 +71,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Bullet.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\Jump.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour\PlatformPatrol.cs" />
-     <Compile Include="Assets\Scripts\SceneManagement\LevelComplete Lv2.cs" />
-     <Compile Include="Assets\Scripts\SceneManagement\L2LC.cs" />
+     <Compile Include="Assets\Scripts\SceneManagement\PauseChecker.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
