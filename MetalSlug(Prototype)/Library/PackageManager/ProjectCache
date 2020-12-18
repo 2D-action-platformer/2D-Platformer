@@ -1,19 +1,19 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/JMumf/OneDrive/Documents/gitshare/CleanVersion/2D-Platformer/MetalSlug(Prototype)/Packages/manifest.json
+    m_FilePath: D:/GameProject/2D-Platformer/MetalSlug(Prototype)/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637438526664824826
+      ticks: 637436664694604509
     m_Hash: 3329330969
   m_LockFileStatus:
-    m_FilePath: C:/Users/JMumf/OneDrive/Documents/gitshare/CleanVersion/2D-Platformer/MetalSlug(Prototype)/Packages/packages-lock.json
+    m_FilePath: D:/GameProject/2D-Platformer/MetalSlug(Prototype)/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637438527443024187
+      ticks: 637438969940916998
     m_Hash: 477917354
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 5.0.3
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.animation@5.0.3
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.animation@5.0.3
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -152,7 +152,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.0.1
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.pixel-perfect@4.0.1
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.pixel-perfect@4.0.1
       assetPath: Packages/com.unity.2d.pixel-perfect
       name: com.unity.2d.pixel-perfect
       displayName: 2D Pixel Perfect
@@ -182,13 +182,11 @@ m_PackageAssets:
         - 2.0.2
         - 2.0.3
         - 2.0.4
-        - 2.1.0
         - 3.0.0
         - 3.0.1
         - 3.0.2
         - 4.0.0
         - 4.0.1
-        - 5.0.0-pre.1
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -224,7 +222,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.0.2
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.psdimporter@4.0.2
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.psdimporter@4.0.2
       assetPath: Packages/com.unity.2d.psdimporter
       name: com.unity.2d.psdimporter
       displayName: 2D PSD Importer
@@ -382,7 +380,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 5.1.0
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.spriteshape@5.1.0
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.spriteshape@5.1.0
       assetPath: Packages/com.unity.2d.spriteshape
       name: com.unity.2d.spriteshape
       displayName: 2D SpriteShape
@@ -557,7 +555,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.6.3
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.cinemachine@2.6.3
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.cinemachine@2.6.3
       assetPath: Packages/com.unity.cinemachine
       name: com.unity.cinemachine
       displayName: Cinemachine
@@ -608,7 +606,6 @@ m_PackageAssets:
         - 2.6.2
         - 2.6.3-preview.2
         - 2.6.3
-        - 2.7.1
         compatible:
         - 2.5.0
         - 2.6.0-preview.2
@@ -622,7 +619,6 @@ m_PackageAssets:
         - 2.6.2
         - 2.6.3-preview.2
         - 2.6.3
-        - 2.7.1
         verified: 2.6.3
       dependencies: []
       resolvedDependencies: []
@@ -674,7 +670,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -769,7 +765,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -804,9 +800,6 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
-        - 3.0.1
-        - 3.0.2
-        - 3.0.3
         compatible:
         - 1.0.2
         - 1.0.6
@@ -826,9 +819,6 @@ m_PackageAssets:
         - 2.0.3
         - 2.0.5
         - 2.0.7
-        - 3.0.1
-        - 3.0.2
-        - 3.0.3
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -868,7 +858,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -937,7 +927,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -1006,7 +996,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.19
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.test-framework@1.1.19
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.test-framework@1.1.19
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1093,7 +1083,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -1162,7 +1152,6 @@ m_PackageAssets:
         - 1.5.0-preview.14
         - 1.5.0
         - 1.5.1
-        - 1.5.3
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
@@ -1180,7 +1169,6 @@ m_PackageAssets:
         - 2.1.0-preview.14
         - 2.1.0
         - 2.1.1
-        - 2.1.3
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -1194,11 +1182,9 @@ m_PackageAssets:
         - 3.0.0-preview.14
         - 3.0.0
         - 3.0.1
-        - 3.0.3
         compatible:
         - 3.0.1
-        - 3.0.3
-        verified: 3.0.3
+        verified: 3.0.1
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -1240,7 +1226,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.5
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.timeline@1.3.5
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.timeline@1.3.5
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1272,7 +1258,6 @@ m_PackageAssets:
         - 1.2.14
         - 1.2.15
         - 1.2.16
-        - 1.2.17
         - 1.3.0-preview.2
         - 1.3.0-preview.3
         - 1.3.0-preview.5
@@ -1284,7 +1269,6 @@ m_PackageAssets:
         - 1.3.3
         - 1.3.4
         - 1.3.5
-        - 1.3.6
         - 1.4.0-preview.1
         - 1.4.0-preview.2
         - 1.4.0-preview.3
@@ -1294,18 +1278,11 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
-        - 1.4.3
         - 1.4.4
-        - 1.4.5
-        - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
         - 1.5.0-preview.3
         - 1.5.0-preview.4
-        - 1.5.0-preview.5
-        - 1.5.1-pre.1
-        - 1.5.1-pre.2
-        - 1.5.1-pre.3
         compatible:
         - 1.2.6
         - 1.2.7
@@ -1317,7 +1294,6 @@ m_PackageAssets:
         - 1.2.14
         - 1.2.15
         - 1.2.16
-        - 1.2.17
         - 1.3.0-preview.2
         - 1.3.0-preview.3
         - 1.3.0-preview.5
@@ -1329,7 +1305,6 @@ m_PackageAssets:
         - 1.3.3
         - 1.3.4
         - 1.3.5
-        - 1.3.6
         - 1.4.0-preview.1
         - 1.4.0-preview.2
         - 1.4.0-preview.3
@@ -1339,19 +1314,12 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
-        - 1.4.3
         - 1.4.4
-        - 1.4.5
-        - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
         - 1.5.0-preview.3
         - 1.5.0-preview.4
-        - 1.5.0-preview.5
-        - 1.5.1-pre.1
-        - 1.5.1-pre.2
-        - 1.5.1-pre.3
-        verified: 1.4.5
+        verified: 1.4.4
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -3190,7 +3158,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.5
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ext.nunit@1.0.5
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.ext.nunit@1.0.5
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3251,7 +3219,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.1.0
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.mathematics@1.1.0
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.mathematics@1.1.0
       assetPath: Packages/com.unity.mathematics
       name: com.unity.mathematics
       displayName: Mathematics
@@ -3326,7 +3294,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.0.3
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.common@4.0.3
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.common@4.0.3
       assetPath: Packages/com.unity.2d.common
       name: com.unity.2d.common
       displayName: 2D Common
@@ -3408,7 +3376,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.0.1
       source: 1
-      resolvedPath: C:\Users\JMumf\OneDrive\Documents\gitshare\CleanVersion\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.path@4.0.1
+      resolvedPath: D:\GameProject\2D-Platformer\MetalSlug(Prototype)\Library\PackageCache\com.unity.2d.path@4.0.1
       assetPath: Packages/com.unity.2d.path
       name: com.unity.2d.path
       displayName: 2D Path
@@ -3432,13 +3400,11 @@ m_PackageAssets:
         - 2.0.4
         - 2.0.5
         - 2.0.6
-        - 2.1.0
         - 3.0.0
         - 3.0.1
         - 3.0.2
         - 4.0.0
         - 4.0.1
-        - 5.0.0-pre.1
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -3469,5 +3435,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/JMumf/OneDrive/Documents/gitshare/CleanVersion/2D-Platformer/MetalSlug(Prototype)/Packages
+m_ProjectPath: D:/GameProject/2D-Platformer/MetalSlug(Prototype)/Packages
 m_EditorVersion: 2020.2.0f1 (3721df5a8b28)
