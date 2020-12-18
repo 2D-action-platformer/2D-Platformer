@@ -109,7 +109,7 @@ public class Soldier : EnemyBehaviour
         }
         else
         {
-            isMoving = true;
+            //isMoving = true;
             inRange = false;
         }
     }
@@ -131,5 +131,10 @@ public class Soldier : EnemyBehaviour
             animate.Play("run");
         else if (!isMoving)
             animate.Play("Aim");
+    }
+
+    private void LateUpdate()
+    {
+        AnimationController();
     }
 }

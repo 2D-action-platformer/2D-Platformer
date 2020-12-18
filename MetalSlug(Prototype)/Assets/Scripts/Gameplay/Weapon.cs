@@ -58,11 +58,10 @@ public class Weapon : MonoBehaviour
     }
 
     void Shoot(){
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             //Shoot();
         }
-        //Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

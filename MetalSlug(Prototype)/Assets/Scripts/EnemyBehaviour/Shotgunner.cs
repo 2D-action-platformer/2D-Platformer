@@ -14,6 +14,7 @@ public class Shotgunner : EnemyBehaviour
     private float upAngle = 90f, endUpAngle = 270f;
 
     //private EnemyBehaviour enemy;
+    public Transform explosion;
     public Transform FirePoint;
     public float stoppingDistance;
     public float retreatDistance;
@@ -203,5 +204,15 @@ public class Shotgunner : EnemyBehaviour
             AnimationControl();
         else
             GameManager.gm.StartCoroutine(GameManager.gm.WaitForSpawn(player));
+    }
+
+    public override void Dead()
+    {
+        if(explosion)
+        {
+            GameObject explode = ((Transform)Instantiate(explosion, this.transform.position, this.transform.rotation)).gameObject;
+            //Destroy(explode, 2.0f);
+        }
+        GameManager.gm.StartCoroutine(GameManager.gm.KillEnemy(this));
     }
 }

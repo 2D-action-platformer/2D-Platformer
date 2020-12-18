@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     public Rigidbody2D rb;
+    private EnemyBehaviour enemy;
 
     // Update is called once per frame
     void Update()
@@ -15,12 +16,18 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo){
-        EnemyBehaviour  enemy = hitInfo.GetComponent<EnemyBehaviour>();
-        Debug.Log(hitInfo);
-        if(enemy == null){
+        //Debug.Log(hitInfo.gameObject.layer);
+        if (hitInfo.gameObject.layer.Equals(14))
+        {
+            //Debug.Log(hitInfo);
+            enemy = hitInfo.gameObject.GetComponent<EnemyBehaviour>();
+            enemy.takeDamage(1);
+            Destroy(gameObject);
+        }
+        /*if(enemy == null){
             return;
         }
         enemy.takeDamage(1);
-        Destroy(gameObject);
+        Destroy(gameObject);*/
     }
 }

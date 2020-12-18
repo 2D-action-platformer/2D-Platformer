@@ -9,7 +9,7 @@ public class Zombie : EnemyBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            Debug.Log(collision.name);
+           // Debug.Log(collision.name);
             isAttacking = true;
             isMoving = false;
             attackPlayer();

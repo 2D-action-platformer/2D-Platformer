@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator KillEnemy(EnemyBehaviour enemy)
     {
        // Debug.Log(enemy.animate.GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(enemy.animate.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(1);
         enemy.gameObject.SetActive(false);
     }
     

@@ -19,7 +19,6 @@ public class Jump : MonoBehaviour
     {
        // Debug.Log("Jump");
         enemy.AddForce(Vector2.up * force);
-        
     }
 
     private IEnumerator Pause()

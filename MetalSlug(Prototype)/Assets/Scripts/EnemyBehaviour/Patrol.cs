@@ -14,6 +14,7 @@ public class Patrol : MonoBehaviour
     {
         soldier = this.GetComponent<Soldier>();
         movingRight = soldier.facingRight;
+        soldier.isMoving = true;
     }
 
     void FixedUpdate()
@@ -51,6 +52,8 @@ public class Patrol : MonoBehaviour
         {
             transform.Translate(Vector2.right * soldier.stats.speed * Time.deltaTime);
         }
+        else
+            soldier.isMoving = true;
 
         hit = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if (hit.collider == null)
