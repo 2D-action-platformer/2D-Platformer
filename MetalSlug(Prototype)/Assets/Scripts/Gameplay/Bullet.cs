@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
         //Debug.Log(hitInfo.gameObject.layer);
         if (hitInfo.gameObject.layer.Equals(14))
         {
-            //Debug.Log(hitInfo);
+            Debug.Log(hitInfo);
             enemy = hitInfo.gameObject.GetComponent<EnemyBehaviour>();
             enemy.takeDamage(1);
             Destroy(gameObject);
